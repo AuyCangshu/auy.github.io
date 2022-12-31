@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>公示栏</title>
+    <style>
+        #ad {
+            position: fixed;
+            right: 0%;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+        }
+        
+        #buttons {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 50%;
+            height: 50%;
+        }
+        
+        button {
+            width: 100%;
+            height: 100%;
+            font-size: 48px;
+            background: greenyellow;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            transition-duration: 0.4s;
+        }
+        
+        #ad :hover {
+            width: 100%;
+            height: 100%;
+            font-size: 48px;
+            background: gray;
+            color: black;
+            border: black;
+            border-radius: 4px;
+        }
+        
+        #buttons :hover {
+            width: 100%;
+            height: 100%;
+            font-size: 48px;
+            background: gray;
+            color: black;
+            border: 2px black;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='ad'>
+        <button onclick="close_ad()">关闭广告</button>
+        <br>
+        <img src="little_black_son.jpg">
+
+    </div>
+    <div id='buttons' align="center">
+        <button id="clicks_me" onclick="my_function()">点我</button>
+    </div>
+    <script>
+        function close_ad() {
+            ads = document.getElementById('ad')
+            ads.style.display = 'none'
+        }
+        var panding = false;
+        var item = 0
+        var x
+        var y
+        var z
+        var item_name
+        var name
+        var shijian
+        var times
+        var renwu = 0
+        var renwu_item
+        var timesss = 0
+        var time_item
+        var btn
+        var item_item
+
+        function my_function() {
+            while (!panding) {
+                name = prompt("请输入名字", "无名氏");
+                shijian = prompt("请输入事件", '没逝')
+                times = prompt("请输入时间", "2022-10-2")
+                if (item == 6) {
+                    alert("已经超过可添加上限！")
+                    break
+                }
+                item = item + 1
+                item_name = "saying" + item
+                item_item = "item" + item
+                renwu = renwu + 1
+                renwu_item = "renwu" + renwu
+
+                timesss = timesss + 1
+                time_item = 'time' + timesss
+                panding = confirm("是否退出？")
+
+                y = document.getElementById(renwu_item);
+                y.innerHTML = shijian
+                x = document.getElementById(item_name);
+                x.innerHTML = name;
+                z = document.getElementById(time_item);
+                z.innerHTML = times;
+                btn = document.getElementById("buttons")
+                btn.innerHTML = ""
+                itm = document.getElementById(item_item);
+                itm.innerHTML = item
+            }
+
+        }
+    </script>
+    <h1 id="saying1" align="center" style="color:black"></h1>
+    <br>
+    <h2 id='time1' align="center" style="color:red"></h2>
+    <br>
+    <h2 id='renwu1' align="center" style="color:black"></h2>
+    <br>
+    <h1 id="item1" align="center" style="background-color: red;">------------------------------ 分隔线 ------------------------------</h1>
+    <br>
+    <!-- 分隔线 -->
+    <h1 id="saying2" align="center" style="color:black"></h1>
+    <br>
+    <h2 id='time2' align="center" style="color:red"></h2>
+    <br>
+    <h2 id='renwu2' align="center" style="color:black"></h2>
+    <br>
+    <h1 id='item2' align="center" style="background-color: red;">------------------------------ 分隔线 ------------------------------</h1>
+    <br>
+    <!-- 分隔线 -->
+    <h1 id="saying3" align="center" style="color:black"></h1>
+    <br>
+    <h2 id='time3' align="center" style="color:red"></h2>
+    <br>
+    <h2 id='renwu3' align="center" style="color:black"></h2>
+    <br>
+    <h1 id='item3' align="center" style="background-color: red;">------------------------------ 分隔线 ------------------------------</h1>
+    <br>
+    <!-- 分隔线 -->
+    <h1 id="saying4" align="center" style="color:black"></h1>
+    <br>
+    <h2 id='time4' align="center" style="color:red"></h2>
+    <br>
+    <h2 id='renwu4' align="center" style="color:black"></h2>
+    <br>
+    <h1 id='item4' align="center" style="background-color: red;">------------------------------ 分隔线 ------------------------------</h1>
+    <br>
+    <!-- 分隔线 -->
+    <h1 id="saying5" align="center" style="color:black"></h1>
+    <br>
+    <h2 id='time5' align="center" style="color:red"></h2>
+    <br>
+    <h2 id='renwu5' align="center" style="color:black"></h2>
+    <br>
+    <h1 id='item5' align="center" style="background-color: red;">------------------------------ 分隔线 ------------------------------</h1>
+    <br>
+    <!-- 分隔线 -->
+</body>
+
+</html>
